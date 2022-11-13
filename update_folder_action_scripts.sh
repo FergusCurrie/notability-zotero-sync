@@ -1,0 +1,1 @@
+sudo cp "notability-sync-folder-action-script.scpt" "/Library/Scripts/Folder Action Scripts/notability-sync-folder-action-script.scpt"
