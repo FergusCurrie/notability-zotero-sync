@@ -26,3 +26,8 @@ To fix:
 4. Uncheck "Enable Folder Actions"
 5. Check "Enable Folder Actions"
 6. Hit yes 
+
+## Todo
+- Automatically export all notes 
+    - had a pretty deep dive here and there weren't any great options
+- Algorithm to match notability files with different but similar names to zotero database using cosine similarity
