@@ -21,11 +21,12 @@ def path_to_zotero(fn):
         # print(sub_directory)
         # sub_directory is a random code
         sub_directory_pdfs = [
-            x for x in os.listdir(f"{zotero_directory}/{sub_directory}/") if ".PDF" in x
+            x
+            for x in os.listdir(f"{zotero_directory}/{sub_directory}/")
+            if ".PDF" in x or ".pdf" in x
         ]
         if len(sub_directory_pdfs) > 0:
             sub_directory_pdf = sub_directory_pdfs[0]
-
             if fn == sub_directory_pdf.replace(".PDF", ".pdf"):
                 return f"{zotero_directory}/{sub_directory}/{sub_directory_pdf}"
 
@@ -37,10 +38,8 @@ notability_pdfs = get_notability_pdfs()
 
 for pdf in notability_pdfs:
     dir = path_to_zotero(pdf)
-    print(dir)
     if dir is None:
         continue
     else:
         # this is in notability, copy it in
-        print(dir)
         os.rename(f"{notability_pdf_directory}/{pdf}", f"{dir}")
